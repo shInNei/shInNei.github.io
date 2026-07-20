@@ -175,7 +175,7 @@ body {
 .avatar-wrapper {
   width: 140px;
   height: 140px;
-  margin: 0 0 24px 0; /* Left aligned, no centering margin */
+  margin: 0 0 24px 8px; /* Shifted slightly right (8px) for optical alignment with left-aligned text */
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--border-color);
@@ -242,17 +242,19 @@ body {
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 20px;
+  gap: 6px;
+  margin-top: 16px;
   border-top: 1px solid var(--border-color);
-  padding-top: 20px;
+  padding-top: 16px;
+  width: 100%;
+  align-items: flex-start; /* Left-aligned */
 }
 
 .social-link {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 4px 0;
+  gap: 8px;
+  padding: 2px 0;
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.88rem;
@@ -696,6 +698,88 @@ body {
   font-weight: 500;
 }
 
+
+/* Personal Hobbies Styles */
+.interests-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.personal-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.personal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+.personal-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.icon-creative {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+}
+
+.icon-culture {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+}
+
+.icon-travel {
+  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+}
+
+.personal-content {
+  flex: 1;
+}
+
+.personal-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.personal-content p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.personal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.p-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: #f1f5f9;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
 /* Responsive Styles */
 @media (max-width: 900px) {
   .app-container {
@@ -752,5 +836,11 @@ body {
   .card-footer-links {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .personal-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 }

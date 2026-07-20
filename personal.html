@@ -29,7 +29,7 @@
 
   <div class="app-container">
     
-    <!-- Left Sidebar: Profile Details -->
+    <!-- Left Sidebar: Profile Details (Same as index.html for consistency) -->
     <aside class="sidebar">
       <div class="profile-card">
         <div class="avatar-wrapper">
@@ -45,7 +45,7 @@
           <span class="school-sub">(HCMUT)</span>
         </p>
         
-        <!-- Social/Contact Links: Styled as borderless text links -->
+        <!-- Social/Contact Links -->
         <div class="social-links">
           <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Google Scholar">
             <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
@@ -67,53 +67,84 @@
       </div>
     </aside>
     
-    <!-- Right Main Content -->
+    <!-- Right Main Content: Personal Interests & Hobbies -->
     <main class="main-content">
       
-      <!-- Short Bio Description Section: Styled as clean, borderless typography -->
+      <!-- Bio Summary Section -->
       <section class="bio-section">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">Beyond Academics</h2>
         <div class="bio-card">
           <p class="bio-text">
-            Final-year Computer Science student at Ho Chi Minh University of Technology (HCMUT) with a proven track record in end-to-end academic research. Experienced in cross-cultural research environments, demonstrated through a research internship at Kyoto Institute of Technology (Japan) and an IEEE publication. Highly motivated to pursue graduate studies to solve complex mathematical and physical challenges in Artificial Intelligence and Computer Graphics.
+            While I spend a significant portion of my time researching computer graphics and AI algorithms, I believe in maintaining a diverse set of creative and cultural pursuits. Exploring the intersection between logic and art is what drives me, whether through shader programming, language learning, or photography. Here is a glimpse into what keeps me inspired outside of work and studies.
           </p>
         </div>
       </section>
       
-      <!-- Projects & Publications Section -->
+      <!-- Interests Grid Section -->
       <section class="portfolio-section">
-        <div class="portfolio-header">
-          <h2 class="section-title">Projects & Publications</h2>
+        <h2 class="section-title">My Hobbies & Interests</h2>
+        
+        <div class="interests-grid">
           
-          <!-- Search & Filter Controls -->
-          <div class="search-filter-controls">
-            <!-- Search Box -->
-            <div class="search-box">
-              <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              <input type="text" id="project-search" placeholder="Search by title, tags, keywords...">
+          <!-- Interest 1: Creative Coding -->
+          <div class="personal-card">
+            <div class="personal-icon-wrapper icon-creative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
             </div>
-            
-            <!-- Type Filters -->
-            <div class="filter-tabs">
-              <button class="filter-tab active" data-filter="all">All</button>
-              <button class="filter-tab" data-filter="academic">Academic</button>
-              <button class="filter-tab" data-filter="industry">Industry</button>
-              <button class="filter-tab" data-filter="personal">Personal</button>
+            <div class="personal-content">
+              <h3>Creative Coding & Shader Art</h3>
+              <p>
+                I am fascinated by how mathematics can generate beautiful interactive structures in real-time. I love building shader programs in WebGL/GLSL, exploring procedural graphics, and experimenting with generative models (like image super-resolution and REST pipelines) to restore historical photographs and render digital environments.
+              </p>
+              <div class="personal-tags">
+                <span class="p-tag">WebGL</span>
+                <span class="p-tag">GLSL</span>
+                <span class="p-tag">Generative Models</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <!-- Timeline Grouped list of projects -->
-        <div id="projects-timeline" class="projects-timeline">
-          <!-- JavaScript will dynamically render year groupings here -->
-          <div class="loading-state">Loading projects database...</div>
+          
+          <!-- Interest 2: Japanese Language & Culture -->
+          <div class="personal-card">
+            <div class="personal-icon-wrapper icon-culture">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6" fill="#ef4444" opacity="0.15"></circle><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+            </div>
+            <div class="personal-content">
+              <h3>Japanese Language & Culture</h3>
+              <p>
+                Having completed a research internship in Kyoto, Japan, I fell in love with Japanese culture, hospitality (Omotenashi), and language. To help other language enthusiasts, I built <em>Nihonghub</em>, an interactive Japanese learning web application. I continue to study Japanese, watch media, and explore cultural exchanges.
+              </p>
+              <div class="personal-tags">
+                <span class="p-tag">Kyoto Internship</span>
+                <span class="p-tag">Japanese (Nihongo)</span>
+                <span class="p-tag">Nihonghub App</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interest 3: Travel & Photography -->
+          <div class="personal-card">
+            <div class="personal-icon-wrapper icon-travel">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            </div>
+            <div class="personal-content">
+              <h3>Travel & Nature Photography</h3>
+              <p>
+                I enjoy traveling to capture natural landscapes and architectural designs. Walking through nature reserves, botanical gardens, and historical sites helps me clear my mind. I love taking photographs that play with natural lighting and colors, which in turn inspires my research in computer graphics.
+              </p>
+              <div class="personal-tags">
+                <span class="p-tag">Nature</span>
+                <span class="p-tag">Travel Journal</span>
+                <span class="p-tag">Photography</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
       
     </main>
   </div>
 
-  <!-- Scripts -->
-  <script src="app.js"></script>
 </body>
 </html>

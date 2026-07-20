@@ -104,7 +104,6 @@ let currentSearchQuery = "";
 const projectsTimeline = document.getElementById("projects-timeline");
 const searchInput = document.getElementById("project-search");
 const filterTabs = document.querySelectorAll(".filter-tab");
-const navPersonalFilter = document.getElementById("nav-personal-filter");
 
 // Helper to match icons to project types for fallbacks
 function getFallbackIcon(type) {
@@ -305,26 +304,7 @@ filterTabs.forEach(tab => {
   });
 });
 
-// Navbar "Personal" link triggers the "personal" tab filter and scrolls to timeline
-navPersonalFilter.addEventListener("click", (e) => {
-  e.preventDefault();
-  selectFilterTab("personal");
-  
-  // Smooth scroll to timeline section
-  const timelineSection = document.querySelector(".portfolio-section");
-  if (timelineSection) {
-    const offset = 80; // Margin below fixed navbar
-    const bodyRect = document.body.getBoundingClientRect().top;
-    const elementRect = timelineSection.getBoundingClientRect().top;
-    const elementPosition = elementRect - bodyRect;
-    const offsetPosition = elementPosition - offset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth"
-    });
-  }
-});
+// Navbar link navigates to personal.html directly
 
 // Initialize on DOM load
 window.addEventListener("DOMContentLoaded", () => {
