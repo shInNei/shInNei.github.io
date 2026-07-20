@@ -47,7 +47,7 @@
   --tag-status-text: #334155;
   
   /* Layout constraints */
-  --max-width: 1200px;
+  --max-width: 1300px;
   --sidebar-width: 290px;       /* Increased sidebar width to fit name and details */
   --border-radius: 8px;
   --border-radius-sm: 4px;
@@ -147,7 +147,7 @@ body {
 .app-container {
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
-  gap: 48px;
+  gap: 32px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 56px 24px 80px;
@@ -193,8 +193,8 @@ body {
   transition: var(--transition-smooth);
 }
 
-.avatar-img.hide {
-  display: none;
+.hide {
+  display: none !important;
 }
 
 .avatar-fallback {
@@ -208,10 +208,6 @@ body {
   font-size: 1.2rem;
   text-transform: uppercase;
   background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-}
-
-.avatar-fallback.hide {
-  display: none;
 }
 
 .profile-name {
@@ -437,77 +433,73 @@ body {
   }
 }
 
-.timeline-group {
-  display: grid;
-  grid-template-columns: 80px 1fr;
+.projects-timeline {
+  display: flex;
+  flex-direction: column;
   gap: 28px;
   position: relative;
   animation: groupAppear 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.timeline-year {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  position: sticky;
-  top: 94px; /* Sticky below header navbar */
-  height: fit-content;
-  text-align: right;
-  letter-spacing: -0.03em;
-  padding-right: 12px;
-  border-right: 2px solid var(--border-color);
-  line-height: 1.2;
-}
-
-.timeline-projects {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-/* Project / Pub Card */
+/* Project / Pub Card - Clean flat entry layout without card box */
 .project-card {
   display: flex;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
   transition: var(--transition-smooth);
+  height: auto;
+  align-items: stretch; /* Stretch children vertically to align bottoms */
+  gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-color);
   
   /* Initial state for micro-animation */
   opacity: 0;
   animation: groupAppear 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-hover);
+.project-card:last-child {
+  border-bottom: none;
 }
 
-/* Card Thumbnail Container */
+.project-card:hover {
+  /* Keep static flat entries clean without transformations */
+  transform: none;
+  box-shadow: none;
+}
+
+/* Card Thumbnail Container - Stretches vertically to match content bottom */
 .card-thumbnail-container {
-  width: 180px;
-  min-width: 180px;
+  width: 280px;
+  min-width: 280px;
+  min-height: 170px; /* Default height for short entries */
   position: relative;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid var(--border-color);
+  border: 1px solid var(--border-color);
   overflow: hidden;
+  border-radius: 6px;
+  align-self: stretch;
 }
 
 .card-thumbnail-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 6px;
 }
 
-.card-thumbnail-img.hide {
-  display: none;
+.card-thumbnail-img.fit-contain {
+  object-fit: contain;
+  background-color: #000000;
+  padding: 12px;
 }
+
+/* handled by global .hide rule */
 
 /* CSS fallback backgrounds based on project type (RGB inspired) */
 .card-thumbnail-fallback {
@@ -558,18 +550,25 @@ body {
 .card-content {
   display: flex;
   flex-direction: column;
-  padding: 20px 24px;
+  padding: 0;
   flex: 1;
   min-width: 0;
 }
 
 .card-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
   line-height: 1.4;
   letter-spacing: -0.01em;
+}
+
+.card-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .card-description {
@@ -582,7 +581,7 @@ body {
 .card-members {
   font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-style: italic;
 }
 
@@ -592,22 +591,13 @@ body {
   font-weight: 600;
 }
 
-/* Multi-row Card Footer (Separated Keywords & Action links) */
-.card-footer {
-  margin-top: auto;
+/* Links footer styling */
+.card-footer-links {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-  border-top: 1px solid var(--border-color);
-  padding-top: 16px;
-}
-
-/* Row 1: Tags and Keywords */
-.card-footer-tags {
-  display: flex;
-  flex-wrap: wrap;
+  gap: 12px;
   align-items: center;
-  gap: 6px;
+  margin-top: auto;
+  padding-top: 12px;
 }
 
 .card-tag {
@@ -803,34 +793,26 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .timeline-group {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .timeline-year {
-    text-align: left;
-    position: relative;
-    top: 0;
-    border-right: none;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 6px;
-    padding-right: 0;
-    margin-bottom: 8px;
-  }
-}
 
 @media (max-width: 600px) {
   .project-card {
     flex-direction: column;
+    height: auto;
+    min-height: 0;
+    align-items: stretch;
+    padding: 16px 0;
+    gap: 16px;
   }
   
   .card-thumbnail-container {
     width: 100%;
-    height: 140px;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
+    height: 160px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .card-thumbnail-img {
+    border-radius: 6px;
   }
   
   .card-footer-links {
