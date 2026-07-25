@@ -31,7 +31,7 @@ function getFallbackIcon(type) {
 // Fetch Projects from JSON Database
 async function loadProjectsDatabase() {
   try {
-    const response = await fetch("projects.json");
+    const response = await fetch("projects.json?v=" + new Date().getTime(), { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
