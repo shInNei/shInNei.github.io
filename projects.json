@@ -2,15 +2,30 @@
   {
     "id": 6,
     "title": "Nihonghub: Interactive Web Application for Japanese Learning",
-    "description": "Developed Nihonghub, an interactive web application designed for Japanese language learning through video content, utilizing ReactJS, Python, and PostgreSQL. Actively engaged in the software development process, familiarizing with standard corporate workflows and Japanese business etiquette during a software development internship at NEC Vietnam.",
+    "description": "An AI-powered interactive web application designed for Japanese language learning through video content.",
     "members": ["Nguyen Huu Huy Thinh"],
     "type": "industry",
     "status": "Active",
     "year": 2026,
-    "keywords": ["ReactJS", "Python", "PostgreSQL"],
+    "keywords": ["AI", "Japanese Learning", "Web Application"],
     "image": "assets/nihonghub.jpg",
     "links": {
-      "code": "https://github.com/shInNei/nihonghub"
+      "demo": "https://nihonghub-frontend.onrender.com/"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Cloth Simulation",
+    "description": "An interactive 3D cloth physics simulation implementing Verlet integration, spring-damper constraints, and real-time environment collision detection.",
+    "members": ["Nguyen Huu Huy Thinh"],
+    "type": "personal",
+    "status": "Completed",
+    "year": 2025,
+    "keywords": ["graphics", "physics", "simulation", "3D"],
+    "image": "assets/cloth_simulation.jpg",
+    "links": {
+      "code": "https://github.com/shInNei/Cloth-Simulation",
+      "demo": "https://shInNei.github.io/Cloth-Simulation/"
     }
   },
   {
@@ -25,22 +40,7 @@
     "image": "assets/chip8_emulator.jpg",
     "links": {
       "code": "https://github.com/shInNei/Chip-8-Emulator",
-      "page": "https://shInNei.github.io/Chip-8-Emulator/"
-    }
-  },
-  {
-    "id": 8,
-    "title": "Cloth Simulation",
-    "description": "An interactive 3D cloth physics simulation implementing Verlet integration, spring-damper constraints, and real-time environment collision detection.",
-    "members": ["Nguyen Huu Huy Thinh"],
-    "type": "personal",
-    "status": "Completed",
-    "year": 2024,
-    "keywords": ["graphics", "physics", "simulation", "3D"],
-    "image": "assets/cloth_simulation.jpg",
-    "links": {
-      "code": "https://github.com/shInNei/Cloth-Simulation",
-      "page": "https://shInNei.github.io/Cloth-Simulation/"
+      "demo": "https://shInNei.github.io/Chip-8-Emulator/"
     }
   }
 ]

@@ -104,7 +104,8 @@ function renderTimeline() {
       if (project.links.pdf) linksHTML += `<a href="${project.links.pdf}" target="_blank" rel="noopener noreferrer" class="card-link">[PDF]</a>`;
       if (project.links.code) linksHTML += `<a href="${project.links.code}" target="_blank" rel="noopener noreferrer" class="card-link">[CODE]</a>`;
       if (project.links.doi) linksHTML += `<a href="${project.links.doi}" target="_blank" rel="noopener noreferrer" class="card-link">[DOI]</a>`;
-      if (project.links.page) linksHTML += `<a href="${project.links.page}" target="_blank" rel="noopener noreferrer" class="card-link">[PAGE]</a>`;
+      if (project.links.demo) linksHTML += `<a href="${project.links.demo}" target="_blank" rel="noopener noreferrer" class="card-link">[DEMO]</a>`;
+      else if (project.links.page) linksHTML += `<a href="${project.links.page}" target="_blank" rel="noopener noreferrer" class="card-link">[DEMO]</a>`;
     }
 
     // Apply specific CSS class if the thumbnail needs object-fit: contain (e.g. CHIP-8 text/monitor display)
@@ -123,6 +124,7 @@ function renderTimeline() {
         <h3 class="card-title">${project.title}</h3>
         <div class="card-tags-row">
           <span class="card-tag tag-${project.type}">${typeLabel}</span>
+          <span class="card-tag tag-year">${project.year}</span>
         </div>
         <p class="card-description">${project.description}</p>
         <div class="card-footer-links">

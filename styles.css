@@ -626,6 +626,13 @@ body {
   border: 1px solid rgba(59, 130, 246, 0.15);
 }
 
+.tag-year {
+  background-color: #f1f5f9;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  font-weight: 600;
+}
+
 .tag-status {
   background-color: var(--tag-status-bg);
   color: var(--tag-status-text);
