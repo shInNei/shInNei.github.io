@@ -633,14 +633,11 @@ body {
   font-weight: 600;
 }
 
-.card-company-logo {
-  height: 20px;
-  width: auto;
-  max-width: 60px;
-  object-fit: contain;
-  vertical-align: middle;
-  align-self: center;
-  margin-left: 2px;
+.tag-company {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  font-weight: 700;
 }
 
 .tag-status {

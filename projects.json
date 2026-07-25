@@ -9,7 +9,7 @@
     "year": 2026,
     "keywords": ["AI", "Japanese Learning", "Web Application"],
     "image": "assets/nihongohub.jpg",
-    "companyLogo": "assets/NEC_Logo.png",
+    "company": "NEC",
     "links": {
       "demo": "https://nihongohub-frontend.onrender.com/"
     }
