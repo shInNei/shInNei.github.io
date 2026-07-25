@@ -125,6 +125,7 @@ function renderTimeline() {
         <div class="card-tags-row">
           <span class="card-tag tag-${project.type}">${typeLabel}</span>
           <span class="card-tag tag-year">${project.year}</span>
+          ${project.companyLogo ? `<img src="${project.companyLogo}" alt="Company Logo" class="card-company-logo">` : ""}
         </div>
         <p class="card-description">${project.description}</p>
         <div class="card-footer-links">
