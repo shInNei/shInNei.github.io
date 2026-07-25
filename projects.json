@@ -27,5 +27,20 @@
       "code": "https://github.com/shInNei/Chip-8-Emulator",
       "page": "https://shInNei.github.io/Chip-8-Emulator/"
     }
+  },
+  {
+    "id": 8,
+    "title": "Cloth Simulation",
+    "description": "An interactive 3D cloth physics simulation implementing Verlet integration, spring-damper constraints, and real-time environment collision detection.",
+    "members": ["Nguyen Huu Huy Thinh"],
+    "type": "personal",
+    "status": "Completed",
+    "year": 2024,
+    "keywords": ["graphics", "physics", "simulation", "3D"],
+    "image": "assets/cloth_simulation.jpg",
+    "links": {
+      "code": "https://github.com/shInNei/Cloth-Simulation",
+      "page": "https://shInNei.github.io/Cloth-Simulation/"
+    }
   }
 ]
