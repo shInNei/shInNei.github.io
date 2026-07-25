@@ -173,10 +173,11 @@ body {
 }
 
 .avatar-wrapper {
-  width: 140px;
-  height: 140px;
-  margin: 0 0 24px 8px; /* Shifted slightly right (8px) for optical alignment with left-aligned text */
-  border-radius: 50%;
+  width: 100%;
+  max-width: 240px;
+  height: 240px;
+  margin: 0 0 24px 0;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border-color);
   background: #f1f5f9;
@@ -184,6 +185,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .avatar-img {
@@ -314,6 +316,9 @@ body {
   border-radius: 0;
   padding: 0;
   box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .bio-text {
