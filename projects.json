@@ -8,7 +8,7 @@
     "status": "Active",
     "year": 2026,
     "keywords": ["AI", "Japanese Learning", "Web Application"],
-    "image": "assets/nihonghub.jpg",
+    "image": "assets/nihongohub.jpg",
     "links": {
       "demo": "https://nihonghub-frontend.onrender.com/"
     }
