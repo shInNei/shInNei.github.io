@@ -31,7 +31,7 @@ function getFallbackIcon(type) {
 // Fetch Projects from JSON Database
 async function loadProjectsDatabase() {
   try {
-    const response = await fetch("projects.json?v=1.4&t=" + new Date().getTime(), { cache: "no-cache" });
+    const response = await fetch("projects.json?v=1.5&t=" + new Date().getTime(), { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -136,16 +136,6 @@ function renderTimeline() {
 
     projectsTimeline.appendChild(card);
 
-    // Verify if images are loaded successfully, fallback immediately if failed
-    const img = card.querySelector(".card-thumbnail-img");
-    if (img && (!img.complete || img.naturalWidth === 0)) {
-      setTimeout(() => {
-        if (img.naturalWidth === 0) {
-          img.classList.add('hide');
-          card.querySelector(".card-thumbnail-fallback").classList.remove('hide');
-        }
-      }, 50);
-    }
   });
 }
 
