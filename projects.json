@@ -7,10 +7,13 @@
     "type": "academic",
     "status": "Active",
     "year": 2026,
+    "tag": "Graduation Thesis",
     "keywords": ["Deep Learning", "Travel Time Estimation", "Route Optimization", "Spatiotemporal AI"],
     "image": "assets/thesis_combined.jpg",
-    "images": ["assets/thesis_1.jpg", "assets/thesis_2.jpg", "assets/thesis_3.jpg"],
-    "links": {}
+    "links": {
+      "pdf_vie": "papers/Graduation_Thesis_Vie.pdf",
+      "summary_eng": "papers/Thesis_Summary_Eng.pdf"
+    }
   },
   {
     "id": 6,

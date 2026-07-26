@@ -98,14 +98,18 @@ function renderTimeline() {
     // Category Label
     const typeLabel = project.type.charAt(0).toUpperCase() + project.type.slice(1);
 
-    // Capitalized Action Links
+    // Action Links
     let linksHTML = "";
     if (project.links) {
-      if (project.links.pdf) linksHTML += `<a href="${project.links.pdf}" target="_blank" rel="noopener noreferrer" class="card-link">[PDF]</a>`;
+      if (project.links.page) linksHTML += `<a href="${project.links.page}" target="_blank" rel="noopener noreferrer" class="card-link">[PROJECT PAGE]</a>`;
+      if (project.links.pdf_vie) linksHTML += `<a href="${project.links.pdf_vie}" target="_blank" rel="noopener noreferrer" class="card-link">[PAPER (VIE)]</a>`;
+      if (project.links.pdf_eng) linksHTML += `<a href="${project.links.pdf_eng}" target="_blank" rel="noopener noreferrer" class="card-link">[PAPER (ENG)]</a>`;
+      if (project.links.summary_eng) linksHTML += `<a href="${project.links.summary_eng}" target="_blank" rel="noopener noreferrer" class="card-link">[SUMMARY (ENG)]</a>`;
+      if (project.links.pdf && !project.links.pdf_vie && !project.links.pdf_eng) linksHTML += `<a href="${project.links.pdf}" target="_blank" rel="noopener noreferrer" class="card-link">[PDF]</a>`;
       if (project.links.code) linksHTML += `<a href="${project.links.code}" target="_blank" rel="noopener noreferrer" class="card-link">[CODE]</a>`;
+      if (project.links.dataset) linksHTML += `<a href="${project.links.dataset}" target="_blank" rel="noopener noreferrer" class="card-link">[DATASET]</a>`;
       if (project.links.doi) linksHTML += `<a href="${project.links.doi}" target="_blank" rel="noopener noreferrer" class="card-link">[DOI]</a>`;
       if (project.links.demo) linksHTML += `<a href="${project.links.demo}" target="_blank" rel="noopener noreferrer" class="card-link">[DEMO]</a>`;
-      else if (project.links.page) linksHTML += `<a href="${project.links.page}" target="_blank" rel="noopener noreferrer" class="card-link">[DEMO]</a>`;
     }
 
     // Apply specific CSS class if the thumbnail needs object-fit: contain
@@ -116,28 +120,14 @@ function renderTimeline() {
       fitClass = "fit-contain-white";
     }
 
-    let thumbnailHTML = "";
-    if (Array.isArray(project.images) && project.images.length >= 2) {
-      thumbnailHTML = `
-        <div class="card-thumbnail-dual">
-          <img src="${project.images[0]}" alt="${project.title} - Diagram 1" class="card-thumbnail-sub-img">
-          <img src="${project.images[1]}" alt="${project.title} - Diagram 2" class="card-thumbnail-sub-img">
-        </div>
-      `;
-    } else {
-      thumbnailHTML = `
+    card.innerHTML = `
+      <div class="card-thumbnail-container">
         <img src="${project.image}" alt="${project.title}" class="card-thumbnail-img ${fitClass}" 
              onerror="this.classList.add('hide'); this.nextElementSibling.classList.remove('hide');">
         <div class="card-thumbnail-fallback fallback-${project.type} hide">
           <span class="fallback-icon">${getFallbackIcon(project.type)}</span>
           <span class="fallback-type">${typeLabel}</span>
         </div>
-      `;
-    }
-
-    card.innerHTML = `
-      <div class="card-thumbnail-container">
-        ${thumbnailHTML}
       </div>
       <div class="card-content">
         <h3 class="card-title">${project.title}</h3>
@@ -145,6 +135,7 @@ function renderTimeline() {
           <span class="card-tag tag-${project.type}">${typeLabel}</span>
           ${project.company ? `<span class="card-tag tag-company">${project.company}</span>` : ""}
           <span class="card-tag tag-year">${project.year}</span>
+          ${project.tag ? `<span class="card-tag tag-green">${project.tag}</span>` : ""}
         </div>
         <p class="card-description">${project.description}</p>
         <div class="card-footer-links">

@@ -672,6 +672,13 @@ body {
   font-weight: 700;
 }
 
+.tag-green {
+  background-color: var(--tag-personal-bg);
+  color: var(--tag-personal-text);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  font-weight: 700;
+}
+
 .tag-status {
   background-color: var(--tag-status-bg);
   color: var(--tag-status-text);
