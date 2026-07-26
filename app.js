@@ -151,7 +151,7 @@ function renderTimeline() {
         <div class="card-tags-row">
           <span class="card-tag tag-${project.type}">${typeLabel}</span>
           ${project.company ? `<span class="card-tag tag-company">${project.company}</span>` : ""}
-          ${project.tag ? `<span class="card-tag tag-green">${project.tag}</span>` : ""}
+          ${project.tag ? `<span class="card-tag tag-purple">${project.tag}</span>` : ""}
           <span class="card-tag tag-year">${project.year}</span>
         </div>
         <p class="card-description">${project.description}</p>

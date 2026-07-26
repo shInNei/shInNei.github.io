@@ -670,10 +670,10 @@ body {
   font-weight: 700;
 }
 
-.tag-green {
-  background-color: var(--tag-personal-bg);
-  color: var(--tag-personal-text);
-  border: 1px solid rgba(16, 185, 129, 0.25);
+.tag-purple, .tag-venue {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+  border: 1px solid rgba(147, 51, 234, 0.25);
   font-weight: 700;
 }
 
