@@ -75,16 +75,16 @@ function renderTimeline() {
     return;
   }
 
-  // 2. Sort Projects (Order by category: Academic -> Industry -> Personal, then by year descending and id descending)
+  // 2. Sort Projects (Order by year descending, then within same year by category: Academic -> Industry -> Personal, then id descending)
   const categoryOrder = { academic: 1, industry: 2, personal: 3 };
   const sortedProjects = filteredProjects.sort((a, b) => {
+    if (b.year !== a.year) {
+      return b.year - a.year;
+    }
     const orderA = categoryOrder[a.type] || 99;
     const orderB = categoryOrder[b.type] || 99;
     if (orderA !== orderB) {
       return orderA - orderB;
-    }
-    if (b.year !== a.year) {
-      return b.year - a.year;
     }
     return b.id - a.id;
   });
