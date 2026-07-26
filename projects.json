@@ -23,7 +23,7 @@
     "id": 10,
     "title": "Custom Robot Arm-Based Trowel Direction Determination on Wall Corners using Deep Predictive Learning",
     "description": "A deep predictive learning model determining trowel directions of a custom robot arm on wall corners to enhance autonomous construction precision.",
-    "members": ["Nguyen Huu Huy Thinh"],
+    "members": ["Nguyen Huu Huy Thinh", "Mai Xuan Bach", "Weiwei Du", "Makoto Muramoto", "Eunjong Choi", "Ikumi Noborio"],
     "type": "academic",
     "status": "Completed",
     "year": 2025,

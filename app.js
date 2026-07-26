@@ -116,7 +116,11 @@ function renderTimeline() {
     let fitClass = "";
     if (project.title.toLowerCase().includes("chip-8")) {
       fitClass = "fit-contain";
-    } else if (project.title.toLowerCase().includes("arrival time") || (project.image && project.image.includes("thesis"))) {
+    } else if (
+      project.title.toLowerCase().includes("arrival time") || 
+      project.title.toLowerCase().includes("robot") ||
+      (project.image && (project.image.includes("thesis") || project.image.includes("robot")))
+    ) {
       fitClass = "fit-contain-white";
     }
 
