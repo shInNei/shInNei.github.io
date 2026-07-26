@@ -798,6 +798,17 @@ body {
   margin-bottom: 8px;
 }
 
+.personal-title-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.personal-title-link:hover {
+  color: var(--color-b-hover);
+  text-decoration: underline;
+}
+
 .personal-content p {
   font-size: 0.92rem;
   color: var(--text-secondary);
