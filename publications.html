@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyen Huu Huy Thinh</title>
+  <title>Publications - Nguyen Huu Huy Thinh</title>
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/avatar.jpg">
   <!-- Google Fonts: Inter -->
@@ -22,9 +22,9 @@
         <span class="nav-logo-r">N</span><span class="nav-logo-g">H</span><span class="nav-logo-b">H</span> Thinh
       </a>
       <div class="nav-links">
-        <a href="index.html" class="nav-link-item active">Home</a>
+        <a href="index.html" class="nav-link-item">Home</a>
         <a href="papers/Nguyen_Huu_Huy_Thinh_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link-item">CV</a>
-        <a href="publications.html" class="nav-link-item">Publications</a>
+        <a href="publications.html" class="nav-link-item active">Publications</a>
         <a href="personal.html" class="nav-link-item">Personal</a>
       </div>
     </div>
@@ -48,7 +48,7 @@
           <span class="school-sub">(HCMUT)</span>
         </p>
         
-        <!-- Social/Contact Links: Styled as borderless text links -->
+        <!-- Social/Contact Links -->
         <div class="social-links">
           <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Google Scholar">
             <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
@@ -72,57 +72,25 @@
     
     <!-- Right Main Content -->
     <main class="main-content">
-      
-      <!-- Short Bio Description Section: Styled as clean, borderless typography -->
-      <section class="bio-section">
-        <h2 class="section-title">About Me</h2>
-        <div class="bio-card">
-          <p class="bio-text">
-            I hold a Bachelor's degree in Computer Science from Ho Chi Minh University of Technology (HCMUT). My research interests lie in Computer Graphics, Computer Vision and Applied Artificial Intelligence to solve real-world problems in domains such as traffic management and medical healthcare.
-          </p>
-          <p class="bio-text">
-            Previously, I was a Software Engineer Intern at NEC Vietnam and a Research Intern at the Visual Media Laboratory at Kyoto Institute of Technology.
-          </p>
-          <p class="bio-text">
-            This page showcases my work, publications and personal projects created in my free time. Feel free to reach out via my contact info if you would like to collaborate or connect!
-          </p>
-        </div>
-      </section>
-      
-      <!-- Projects & Publications Section -->
       <section class="portfolio-section">
-        <div class="portfolio-header">
-          <h2 class="section-title">Projects & Publications</h2>
-          
-          <!-- Search & Filter Controls -->
-          <div class="search-filter-controls">
-            <!-- Search Box -->
-            <div class="search-box">
-              <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              <input type="text" id="project-search" placeholder="Search by title, tags, keywords...">
-            </div>
-            
-            <!-- Type Filters -->
-            <div class="filter-tabs">
-              <button class="filter-tab active" data-filter="all">All</button>
-              <button class="filter-tab" data-filter="academic">Academic</button>
-              <button class="filter-tab" data-filter="industry">Industry</button>
-              <button class="filter-tab" data-filter="personal">Personal</button>
-            </div>
-          </div>
-        </div>
+        <h2 class="section-title">Publications & Research</h2>
         
-        <!-- Timeline Grouped list of projects -->
-        <div id="projects-timeline" class="projects-timeline">
-          <!-- JavaScript will dynamically render year groupings here -->
-          <div class="loading-state">Loading projects database...</div>
+        <div class="construction-card">
+          <div class="construction-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="construction-title">Page Under Construction</h3>
+          <p class="construction-text">
+            This research and publications page is currently under development. Detailed paper preprints, datasets, and extended documentation will be posted here soon.
+          </p>
+          <a href="index.html" class="construction-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back to Home</span>
+          </a>
         </div>
       </section>
-      
     </main>
   </div>
 
-  <!-- Scripts -->
-  <script src="app.js?v=1.5"></script>
 </body>
 </html>
