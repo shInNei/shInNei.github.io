@@ -2,7 +2,7 @@
   {
     "id": 9,
     "title": "Research and Develop Solutions to Estimate Arrival Time and Effective Routing",
-    "description": "A deep learning framework for spatiotemporal travel time estimation and dynamic route optimization. Features contrastive representation learning and segment-based encoding to deliver accurate ETA predictions.",
+    "description": "A Transformer-based deep learning framework for spatiotemporal travel time estimation. By leveraging Contrastive Learning and spatial Point-of-Interest contexts, it delivers highly accurate and stable ETA predictions for dense megacities.",
     "members": ["Nguyen Huu Huy Thinh"],
     "type": "academic",
     "status": "Active",
