@@ -52,6 +52,21 @@
     }
   },
   {
+    "id": 11,
+    "title": "MiniTracer: Interactive C++ Progressive Path Tracer",
+    "description": "An interactive C++ progressive path tracer featuring multithreaded CPU rendering, OpenGL viewport, and Dear ImGui controls for real-time ray tracing.",
+    "members": ["Nguyen Huu Huy Thinh"],
+    "type": "personal",
+    "status": "Active",
+    "year": 2025,
+    "keywords": ["C++", "OpenGL", "Ray Tracing", "Path Tracer", "Computer Graphics"],
+    "image": "assets/minitracer.jpg",
+    "links": {
+      "code": "https://github.com/shInNei/MiniTracer",
+      "demo": "publications.html"
+    }
+  },
+  {
     "id": 8,
     "title": "Cloth Simulation",
     "description": "An interactive 3D cloth physics simulation implementing Verlet integration, spring-damper constraints, and real-time environment collision detection.",
