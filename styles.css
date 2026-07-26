@@ -612,13 +612,12 @@ body {
 .card-members {
   font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 12px;
-  font-style: italic;
+  margin-top: 2px;
+  margin-bottom: 8px;
 }
 
 .card-members strong {
   color: var(--text-secondary);
-  font-style: normal;
   font-weight: 600;
 }
 

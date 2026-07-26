@@ -120,6 +120,18 @@ function renderTimeline() {
       fitClass = "fit-contain-white";
     }
 
+    // Format Members / Authors
+    let membersHTML = "";
+    if (Array.isArray(project.members) && project.members.length > 0) {
+      const formattedMembers = project.members.map(name => {
+        if (name.includes("Nguyen Huu Huy Thinh")) {
+          return `<strong>${name}</strong>`;
+        }
+        return name;
+      }).join(", ");
+      membersHTML = `<div class="card-members">${formattedMembers}</div>`;
+    }
+
     card.innerHTML = `
       <div class="card-thumbnail-container">
         <img src="${project.image}" alt="${project.title}" class="card-thumbnail-img ${fitClass}" 
@@ -131,6 +143,7 @@ function renderTimeline() {
       </div>
       <div class="card-content">
         <h3 class="card-title">${project.title}</h3>
+        ${membersHTML}
         <div class="card-tags-row">
           <span class="card-tag tag-${project.type}">${typeLabel}</span>
           ${project.company ? `<span class="card-tag tag-company">${project.company}</span>` : ""}
