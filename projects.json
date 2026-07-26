@@ -1,5 +1,18 @@
 [
   {
+    "id": 9,
+    "title": "Research and Develop Solutions to Estimate Arrival Time and Effective Routing",
+    "description": "A deep learning framework for spatiotemporal travel time estimation and dynamic route optimization. Features contrastive representation learning and segment-based encoding to deliver accurate ETA predictions.",
+    "members": ["Nguyen Huu Huy Thinh"],
+    "type": "academic",
+    "status": "Active",
+    "year": 2026,
+    "keywords": ["Deep Learning", "Travel Time Estimation", "Route Optimization", "Spatiotemporal AI"],
+    "image": "assets/thesis_combined.jpg",
+    "images": ["assets/thesis_1.jpg", "assets/thesis_2.jpg", "assets/thesis_3.jpg"],
+    "links": {}
+  },
+  {
     "id": 6,
     "title": "Nihonghub: Interactive Web Application for Japanese Learning",
     "description": "An AI-powered interactive web application designed for Japanese language learning through video content.",

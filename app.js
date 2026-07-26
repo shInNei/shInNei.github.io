@@ -108,17 +108,36 @@ function renderTimeline() {
       else if (project.links.page) linksHTML += `<a href="${project.links.page}" target="_blank" rel="noopener noreferrer" class="card-link">[DEMO]</a>`;
     }
 
-    // Apply specific CSS class if the thumbnail needs object-fit: contain (e.g. CHIP-8 text/monitor display)
-    const fitClass = project.title.toLowerCase().includes("chip-8") ? "fit-contain" : "";
+    // Apply specific CSS class if the thumbnail needs object-fit: contain
+    let fitClass = "";
+    if (project.title.toLowerCase().includes("chip-8")) {
+      fitClass = "fit-contain";
+    } else if (project.title.toLowerCase().includes("arrival time") || (project.image && project.image.includes("thesis"))) {
+      fitClass = "fit-contain-white";
+    }
 
-    card.innerHTML = `
-      <div class="card-thumbnail-container">
+    let thumbnailHTML = "";
+    if (Array.isArray(project.images) && project.images.length >= 2) {
+      thumbnailHTML = `
+        <div class="card-thumbnail-dual">
+          <img src="${project.images[0]}" alt="${project.title} - Diagram 1" class="card-thumbnail-sub-img">
+          <img src="${project.images[1]}" alt="${project.title} - Diagram 2" class="card-thumbnail-sub-img">
+        </div>
+      `;
+    } else {
+      thumbnailHTML = `
         <img src="${project.image}" alt="${project.title}" class="card-thumbnail-img ${fitClass}" 
              onerror="this.classList.add('hide'); this.nextElementSibling.classList.remove('hide');">
         <div class="card-thumbnail-fallback fallback-${project.type} hide">
           <span class="fallback-icon">${getFallbackIcon(project.type)}</span>
           <span class="fallback-type">${typeLabel}</span>
         </div>
+      `;
+    }
+
+    card.innerHTML = `
+      <div class="card-thumbnail-container">
+        ${thumbnailHTML}
       </div>
       <div class="card-content">
         <h3 class="card-title">${project.title}</h3>
