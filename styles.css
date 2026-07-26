@@ -481,8 +481,7 @@ body {
 .card-thumbnail-container {
   width: 280px;
   min-width: 280px;
-  height: 170px;
-  max-height: 170px;
+  min-height: 170px; /* Default height for short entries */
   position: relative;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   display: flex;
@@ -491,7 +490,7 @@ body {
   border: 1px solid var(--border-color);
   overflow: hidden;
   border-radius: 6px;
-  align-self: flex-start;
+  align-self: stretch;
 }
 
 .card-thumbnail-img {

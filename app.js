@@ -98,7 +98,7 @@ function renderTimeline() {
     // Category Label
     const typeLabel = project.type.charAt(0).toUpperCase() + project.type.slice(1);
 
-    // Action Links (Clean labels without square brackets)
+    // Action Links (Title Case labels without square brackets)
     let linksHTML = "";
     if (project.links) {
       if (project.links.page) linksHTML += `<a href="${project.links.page}" target="_blank" rel="noopener noreferrer" class="card-link">Project Page</a>`;
