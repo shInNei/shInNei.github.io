@@ -20,6 +20,23 @@
     }
   },
   {
+    "id": 10,
+    "title": "Custom Robot Arm-Based Trowel Direction Determination on Wall Corners using Deep Predictive Learning",
+    "description": "A deep predictive learning model for determining trowel directions of a custom robot arm on wall corners. Integrates computer vision and spatiotemporal neural networks to enhance autonomous construction precision.",
+    "members": ["Nguyen Huu Huy Thinh"],
+    "type": "academic",
+    "status": "Completed",
+    "year": 2025,
+    "tag": "SNPD 2025",
+    "keywords": ["Robotics", "Deep Predictive Learning", "Computer Vision", "Autonomous Construction"],
+    "image": "assets/robot_arm.jpg",
+    "links": {
+      "page": "#",
+      "pdf_eng": "papers/robotarm.pdf",
+      "code": "#"
+    }
+  },
+  {
     "id": 6,
     "title": "Nihonghub: Interactive Web Application for Japanese Learning",
     "description": "An AI-powered interactive web application designed for Japanese language learning through video content.",
