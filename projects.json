@@ -7,12 +7,16 @@
     "type": "academic",
     "status": "Active",
     "year": 2026,
-    "tag": "Graduation Thesis",
+    "tag": "Bachelor's Thesis",
     "keywords": ["Deep Learning", "Travel Time Estimation", "Route Optimization", "Spatiotemporal AI"],
     "image": "assets/thesis_combined.jpg",
     "links": {
+      "page": "https://shInNei.github.io/POI-CL-TTE/",
       "pdf_vie": "papers/Graduation_Thesis_Vie.pdf",
-      "summary_eng": "papers/Thesis_Summary_Eng.pdf"
+      "summary_eng": "papers/Thesis_Summary_Eng.pdf",
+      "code": "https://github.com/shInNei/POI-CL-TTE",
+      "dataset": "#",
+      "demo": "https://shInNei.github.io/POI-CL-TTE/"
     }
   },
   {
