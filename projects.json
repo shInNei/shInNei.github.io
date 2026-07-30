@@ -95,5 +95,20 @@
       "code": "https://github.com/shInNei/Chip-8-Emulator",
       "demo": "https://shInNei.github.io/Chip-8-Emulator/"
     }
+  },
+  {
+    "id": 12,
+    "title": "GameBoy Emulator",
+    "description": "A complete GameBoy emulator written in C++ with SDL2, OpenGL, and ImGui. (Note: This emulator is specifically designed and built for Windows)",
+    "members": ["Nguyen Huu Huy Thinh"],
+    "type": "personal",
+    "status": "Active",
+    "year": 2026,
+    "keywords": ["C++", "Emulator", "SDL2", "OpenGL", "ImGui"],
+    "image": "assets/Gameboy_logo.svg",
+    "links": {
+      "code": "https://github.com/shInNei/Gameboy-Emulator",
+      "demo": "gameboy_demo.html"
+    }
   }
 ]
