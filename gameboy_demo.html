@@ -92,16 +92,21 @@
     <!-- Right Main Content -->
     <main class="main-content">
       <section class="portfolio-section">
-        <h2 class="section-title">GameBoy Emulator</h2>
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+          <a href="index.html" style="text-decoration: none; color: #555; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #eee; transition: background 0.2s;" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'" title="Back to Homepage">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </a>
+          <h2 class="section-title" style="margin: 0; padding: 0;">GameBoy Emulator</h2>
+        </div>
         
         <div class="project-details" style="background: white; border: 1px solid #eee; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: left;">
           <p class="last-updated" style="color: #888; font-size: 0.9em; margin-bottom: 25px; text-align: right;"><em>Last updated: July 30, 2026</em></p>
           
           <h3 style="margin-top: 0; color: #111;">References & Documents</h3>
-          <ul style="color: #444; line-height: 1.6; margin-bottom: 30px; padding-left: 20px;">
-            <li><strong>Pan Docs:</strong> The single most comprehensive technical reference to Game Boy available to the public.</li>
-            <li><strong>Game Boy CPU Manual:</strong> Official hardware specifications and instruction set details.</li>
-            <li><strong>Optix's CPU instruction set table:</strong> A valuable resource for decoding instructions.</li>
+          <ul style="color: #444; line-height: 1.6; margin-bottom: 40px; padding-left: 20px;">
+            <li><strong><a href="https://gbdev.io/pandocs/" target="_blank" style="color: #0366d6; text-decoration: none;">Pan Docs</a>:</strong> The single most comprehensive technical reference to Game Boy available to the public.</li>
+            <li><strong><a href="http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf" target="_blank" style="color: #0366d6; text-decoration: none;">Game Boy CPU Manual</a>:</strong> Official hardware specifications and instruction set details.</li>
+            <li><strong><a href="https://izik1.github.io/gbops/" target="_blank" style="color: #0366d6; text-decoration: none;">Opcode table</a>:</strong> A valuable resource for decoding instructions.</li>
           </ul>
 
           <h3 style="color: #111;">Features & Screenshots</h3>
@@ -109,15 +114,15 @@
           <div style="text-align: center; margin-bottom: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
             <img src="assets/gbscreen_1.jpg" alt="GameBoy Emulator Screenshot" style="width: 100%; height: auto; display: block;">
           </div>
-          <p style="color: #444; line-height: 1.6; margin-bottom: 30px;">
-            <strong>Core Features Include:</strong>
-            <ul style="color: #444; line-height: 1.6; padding-left: 20px;">
-              <li>Full CPU instruction set emulation</li>
-              <li>PPU (Graphics) with flexible screen scaling and optional palette forcing</li>
-              <li>APU (Audio) with audio synchronization and volume control</li>
-              <li>Powerful Debugger mode with Memory Editor (MMU) and CPU Registers tracking</li>
-            </ul>
-          </p>
+          <h4 style="color: #111; margin-bottom: 15px; font-size: 1.1em;">Core Features Include:</h4>
+          <ul style="color: #444; line-height: 1.6; margin-bottom: 40px; padding-left: 20px;">
+            <li><strong>Full CPU Instruction Emulation:</strong> Highly accurate execution of the entire GameBoy opcode set.</li>
+            <li><strong>Emulation Controls:</strong> Dynamically adjust emulation speed (up to 5x), Pause, Reset, and Single Step through instructions.</li>
+            <li><strong>Hardware Quirks Emulation:</strong> Accurately reproduces specific DMG behaviors including the HALT Bug, OAM Corruption Bug, STAT Interrupt Glitch, and VBlank STAT Bug.</li>
+            <li><strong>PPU (Graphics):</strong> Features flexible screen scaling and optional color palette forcing.</li>
+            <li><strong>APU (Audio):</strong> Full audio synchronization and master volume control.</li>
+            <li><strong>Powerful Debugger Mode:</strong> Real-time Memory Editor (MMU) and live CPU Registers/Flags tracking.</li>
+          </ul>
 
           <h3 style="color: #111;">Demo Video</h3>
           <p style="color: #444; margin-bottom: 15px;"><em>A quick demonstration showing how to load games via drag-and-drop and dynamically adjust emulator settings.</em></p>
