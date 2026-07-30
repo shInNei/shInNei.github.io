@@ -114,11 +114,12 @@ function renderTimeline() {
 
     // Apply specific CSS class if the thumbnail needs object-fit: contain
     let fitClass = "";
-    if (project.title.toLowerCase().includes("chip-8") || project.title.toLowerCase().includes("gameboy")) {
+    if (project.title.toLowerCase().includes("chip-8")) {
       fitClass = "fit-contain";
     } else if (
       project.title.toLowerCase().includes("arrival time") || 
       project.title.toLowerCase().includes("robot") ||
+      project.title.toLowerCase().includes("gameboy") ||
       (project.image && (project.image.includes("thesis") || project.image.includes("robot")))
     ) {
       fitClass = "fit-contain-white";
