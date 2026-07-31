@@ -97,6 +97,21 @@
     }
   },
   {
+    "id": 13,
+    "title": "Ultima Tic-tac-toe agent",
+    "description": "An AI Agent for Ultimate Tic Tac Toe, developed using Monte Carlo Tree Search (MCTS) and Alpha-Beta Pruning algorithms with web based demo allow pve and ai vs ai.",
+    "members": ["Nguyen Huu Huy Thinh"],
+    "type": "personal",
+    "status": "Completed",
+    "year": 2024,
+    "keywords": ["AI", "MCTS", "Alpha-Beta Pruning", "Game Agent", "Tic Tac Toe"],
+    "image": "assets/ultima_ttt.jpg",
+    "links": {
+      "code": "https://github.com/shInNei/UltimaTTT-Agent",
+      "demo": "https://shInNei.github.io/UltimaTTT-Agent"
+    }
+  },
+  {
     "id": 12,
     "title": "GameBoy Emulator",
     "description": "A complete GameBoy emulator written in C++ with SDL2, OpenGL, and ImGui.",
